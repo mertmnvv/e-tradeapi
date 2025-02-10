@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ECommerceApi</name>
+    </assembly>
+    <members>
+        <member name="M:ECommerceApi.Controllers.AuthController.Register(ECommerceApi.Controllers.RegisterRequest)">
+            <summary>
+            Registers a new user
+            </summary>
+            <param name="request">User registration details</param>
+            <returns>The newly created user</returns>
+            <response code="200">Returns the newly created user</response>
+            <response code="400">If the email already exists</response>
+        </member>
+        <member name="M:ECommerceApi.Controllers.AuthController.Login(ECommerceApi.Controllers.LoginRequest)">
+            <summary>
+            Authenticates a user and returns access and refresh tokens
+            </summary>
+            <param name="request">User login credentials</param>
+            <returns>User details and tokens</returns>
+            <response code="200">Returns the user details and tokens</response>
+            <response code="400">If the credentials are invalid</response>
+        </member>
+        <member name="M:ECommerceApi.Controllers.AuthController.RefreshToken(ECommerceApi.Controllers.RefreshTokenRequest)">
+            <summary>
+            Refreshes an expired access token using a refresh token
+            </summary>
+            <param name="request">Current access and refresh tokens</param>
+            <returns>New access and refresh tokens</returns>
+            <response code="200">Returns new tokens</response>
+            <response code="400">If the tokens are invalid</response>
+        </member>
+        <member name="M:ECommerceApi.Controllers.AuthController.RevokeToken(ECommerceApi.Controllers.RevokeTokenRequest)">
+            <summary>
+            Revokes a refresh token
+            </summary>
+            <param name="request">Refresh token to revoke</param>
+            <returns>No content</returns>
+            <response code="200">If the token was successfully revoked</response>
+            <response code="400">If the token is invalid</response>
+        </member>
+        <member name="M:ECommerceApi.Controllers.CategoriesController.GetCategories(System.Int32,System.Int32,System.String)">
+            <summary>
+            Kategorileri listeler
+            </summary>
+            <param name="pageNumber">Sayfa numarası</param>
+            <param name="pageSize">Sayfa başına kategori sayısı</param>
+            <param name="searchTerm">Arama terimi</param>
+        </member>
+        <member name="M:ECommerceApi.Controllers.CategoriesController.GetCategory(System.Int32)">
+            <summary>
+            ID'ye göre kategori getirir
+            </summary>
+            <param name="id">Kategori ID</param>
+        </member>
+        <member name="M:ECommerceApi.Controllers.CategoriesController.CreateCategory(ECommerceApi.DTOs.Category.CreateCategoryRequest)">
+            <summary>
+            Yeni kategori oluşturur
+            </summary>
+            <param name="request">Kategori bilgileri</param>
+        </member>
+        <member name="M:ECommerceApi.Controllers.CategoriesController.UpdateCategory(System.Int32,ECommerceApi.DTOs.Category.UpdateCategoryRequest)">
+            <summary>
+            Kategori bilgilerini günceller
+            </summary>
+            <param name="id">Kategori ID</param>
+            <param name="request">Güncellenecek bilgiler</param>
+        </member>
+        <member name="M:ECommerceApi.Controllers.CategoriesController.DeleteCategory(System.Int32)">
+            <summary>
+            Kategoriyi siler
+            </summary>
+            <param name="id">Kategori ID</param>
+        </member>
+        <member name="T:ECommerceApi.Migrations.InitialCreate">
+            <inheritdoc />
+        </member>
+        <member name="M:ECommerceApi.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ECommerceApi.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ECommerceApi.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:ECommerceApi.Migrations.AddUserEntity">
+            <inheritdoc />
+        </member>
+        <member name="M:ECommerceApi.Migrations.AddUserEntity.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ECommerceApi.Migrations.AddUserEntity.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ECommerceApi.Migrations.AddUserEntity.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:ECommerceApi.Migrations.AddCategoryImageUrl">
+            <inheritdoc />
+        </member>
+        <member name="M:ECommerceApi.Migrations.AddCategoryImageUrl.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ECommerceApi.Migrations.AddCategoryImageUrl.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ECommerceApi.Migrations.AddCategoryImageUrl.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
